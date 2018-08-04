@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html ng-app="textGradient" ng-controller="HostController as host">
+	<head>
+		<title>textGradient</title>
+		<meta charset="UTF-8">
+		<meta name=viewport content="width=device-width, initial-scale=1">
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+		<script src="gradient.js" type="text/javascript"></script>
+		<style>
+			#container {
+				max-width: 700px;
+				margin: auto;
+			}
+			body {
+				padding: 20vh 0;
+				background-color: #333;
+				color: #bbb;
+				font-family: Verdana;
+			}
+			
+			textarea, input:not([type=color]) {
+				width: 100%;
+			}
+			[color-picker] {
+				text-transform: uppercase;
+			}
+			.preview {
+				font-size: 3em;
+				font-weight: bold;
+				text-align: center;
+			}
+			.preview span {
+				transition: all 0.1s ease-in-out;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container" ng-cloak>
+			
+			<div class="preview">
+				<p><span ng-repeat="letter in host.preview track by $index" ng-style="{color: letter.colour}">{{letter.letter}}</span></p>
+			</div>
+			
+			<div class="input">
+				<h2>Colour Input</h2>
+				<input ng-model="host.start" ng-change="host.process()" type="color">
+				<input ng-model="host.end" type="color">
+				<button ng-click="host.randomise()">Randomise</button>
+				<h2>Text Input</h2>
+				<input ng-model="host.input" ng-change="host.process()">
+			</div>
+			
+			<div class="output">
+				<h2>BBCode Output</h2>
+				<textarea ng-model="host.output" rows="8" readonly></textarea>
+			</div>
+			
+		</div>
+	</body>
+</html>
+
+<!-- add a mouseover event to the false statements that, after 2 seconds, marks false statements as known-about so they can be used in conversation or whatever -->
+
+<!-- other AIs (probably just Alexandra?) speak immediately, no typing time -->
+
+<!-- One Variable, Twice-Defined? -->
+
+<!-- If you become 4000:
+ - confrontation with 4000 itself
+ - then you can go talk to the people you talked to already and redefine them out of existence if you want
+ - then you become real and leave? -->
+ 
+ <!-- Last commit was a major reversion -->
+ 
+ <!-- alexandra: It's just that... (what) Well, you don't have a face. (option to compliment her) -->
