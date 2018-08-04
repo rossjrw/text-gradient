@@ -45,7 +45,7 @@
 			<div class="input">
 				<h2>Colour Input</h2>
 				<input ng-model="host.start" ng-change="host.process()" type="color">
-				<input ng-model="host.end" type="color">
+				<input ng-model="host.end" ng-change="host.process()" type="color">
 				<button ng-click="host.randomise()">Randomise</button>
 				<h2>Text Input</h2>
 				<input ng-model="host.input" ng-change="host.process()">
